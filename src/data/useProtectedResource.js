@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import firebase from "firebase/compat/app";
 
 export const useProtectedResource = (url, defaultValue) => {
+    const [isLoading, setIsLoading] = useState(true);
     const [data, setData] = useState(defaultValue);
 
     useEffect(() => {
@@ -19,10 +20,11 @@ export const useProtectedResource = (url, defaultValue) => {
             });
             const data = await response.json();
             setData(data);
+            setIsLoading(false);
         }
 
         loadResource();
-    }, []);
+    }, [url]);
 
-    return [data, setData];
+    return { isLoading, data, setData };
 }
