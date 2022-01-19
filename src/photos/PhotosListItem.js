@@ -10,6 +10,7 @@ export const PhotosListItem = ({photo}) => {
                     src={photo.url} 
                     height="200" 
                     width = "200"
+                    alt=""                    
                 />
             </div>
         </Link>
