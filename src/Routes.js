@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { SignInPage, PrivateRoute } from "./auth";
-import { BrowsePhotosPage, UploadPhotoPage } from "./photos";
+import { BrowsePhotosPage, UploadPhotoPage, PhotoDetailPage } from "./photos";
 import { NavBar } from "./navigation";
 
 const routes = [{
@@ -15,6 +15,10 @@ const routes = [{
 }, {
   path: '/upload-photo',
   Component: UploadPhotoPage,
+  private: true,
+}, {
+  path: '/photos/:id',
+  Component: PhotoDetailPage,
   private: true,
 }
 ];
