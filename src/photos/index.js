@@ -5,3 +5,4 @@ export { NewPhotoButton } from './NewPhotoButton';
 export { SharedPhotosList } from './SharedPhotosList';
 export { UploadPhotoPage } from './UploadPhotoPage';
 export { PhotoDetailPage } from './PhotoDetailPage';
+export { SharedEmailsList } from './SharedEmailsList';
